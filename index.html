@@ -25,10 +25,14 @@
             $('.fancybox').fancybox({ width: "90%", minHeight: "50%" });
 
             $('#content').load('home.html');
-            $('.menu').click(function () {
+            $('li a').click(function () {
                 var url = $(this).attr('href');
                 $('#content').hide().fadeIn(500).load(url);
                 return false;
+            });
+
+            $("a").focus(function () {
+                $(this).blur();
             });
         });
     </script>
@@ -37,7 +41,7 @@
 
 <body>
 
-    <div class="brand"><img style="width:15%;height:5%"  src="img/logo.png" />第十五屆畢業專題實務網站</div>
+    <div id="bodyTop" class="brand"><a href="index.html"><img style="width:15%;height:5%"  src="img/logo.png" /></a>第十五屆畢業專題實務網站</div>
     <div class="address-bar">15th Graduation Monographs website of Information Management Department</div>
 
     <nav class="navbar navbar-default" role="navigation">
@@ -54,15 +58,15 @@
 
             <div class="collapse navbar-collapse navbar-ex1-collapse" >
                 <ul class="nav navbar-nav">
-                    <li><a class="menu" href="home.html"><i class="fa fa-newspaper-o"></i>最新消息</a></li>
-                    <li><a class="menu" href="poster.html"><i class="fa fa-file-o"></i>海報格式</a></li>
-                    <li><a href="#"><i class="fa fa-bullhorn"></i>展覽議程</a></li>
-                    <li><a href="#"><i class="fa fa-users"></i>參加組別</a></li>
-                    <li><a href="#"><i class="fa fa-file-text-o"></i>各組海報</a></li>
-                    <li><a href="#"><i class="fa fa-bar-chart"></i>開票結果</a></li>
-                    <li><a href="#"><i class="fa fa-trophy"></i>得獎名單</a></li>
-                    <li><a href="#"><i class="fa fa-paint-brush"></i>相關設計</a></li>
-                    <li><a href="#"><i class="fa fa-floppy-o"></i>文件下載</a></li>
+                    <li><a href="home.html"><i class="fa fa-newspaper-o"></i>最新消息</a></li>
+                    <li><a href="guide.html"><i class="fa fa-file-o"></i>各組須知</a></li>
+                    <li><a href="construction.html"><i class="fa fa-bullhorn"></i>展覽議程</a></li>
+                    <li><a href="construction.html"><i class="fa fa-users"></i>參加組別</a></li>
+                    <li><a href="construction.html"><i class="fa fa-file-text-o"></i>各組海報</a></li>
+                    <li><a href="construction.html"><i class="fa fa-bar-chart"></i>開票結果</a></li>
+                    <li><a href="construction.html"><i class="fa fa-trophy"></i>得獎名單</a></li>
+                    <li><a href="construction.html"><i class="fa fa-paint-brush"></i>相關設計</a></li>
+                    <li><a href="construction.html"><i class="fa fa-floppy-o"></i>文件下載</a></li>
                 </ul>
             </div>
 

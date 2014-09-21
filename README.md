@@ -1,9 +1,9 @@
 IMproject15
 =================
 
-## ¥Î³~
+## ç”¨é€”
 
-¥»¥Ø¿ı¤U¬°¾ğ¼w¬ì§Ş¤j¾Ç¸ê°TºŞ²z¨t²Ä¤Q¤­©¡¹ê°È±MÃD®i¨Ï¥Î¤§¾ÉÄıºô¯¸«eºİ½d¥»¡C
+æœ¬ç›®éŒ„ä¸‹ç‚ºæ¨¹å¾·ç§‘æŠ€å¤§å­¸è³‡è¨Šç®¡ç†ç³»ç¬¬åäº”å±†å¯¦å‹™å°ˆé¡Œå±•ä½¿ç”¨ä¹‹å°è¦½ç¶²ç«™å‰ç«¯ç¯„æœ¬ã€‚
 
 
 ## Library
@@ -14,6 +14,6 @@ IMproject15
 * fancyBox 2.1.5
 
 
-## ¼ÒªO°Ñ¦Ò
+## æ¨¡æ¿åƒè€ƒ
 
-* [GitHub : Business Casual](https://github.com/IronSummitMedia/startbootstrap/tree/gh-pages/templates/business-casua)
+* [GitHub : Business Casual](https://github.com/IronSummitMedia/startbootstrap/tree/gh-pages/templates/business-casual)
