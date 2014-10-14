@@ -66,6 +66,10 @@ hr {
   padding: 10px 10px;
 }
 
+.box p { 
+    font-size: 1.2em; 
+}
+
 .intro-text {
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -149,7 +153,7 @@ th,td {
 
 .navbar-default {
   background: #fff;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.7);
   border: none;
 }
 
