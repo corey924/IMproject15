@@ -1,0 +1,116 @@
+﻿<style>
+    p {
+        text-align:center;
+        line-height:30px;
+        vertical-align:central;
+    }
+    table th,td {
+        text-align:center
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".goto").click(function () {
+            var url = $(this).attr('href');
+            $("html,body").animate({ scrollTop: $(url).offset().top }, 1000);
+            return false;
+        });
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr><h2 class="intro-text text-center"><strong>參展議程</strong></h2><hr>
+            </div>
+            <div class="col-md-12">
+                <p>樹德科技大學資訊管理系21組參展</p>
+                <p>國立高雄應用科技大學資訊管理系29組參展</p>
+                <p>總共50組，每組十五分鐘</p>
+                <p style="margin-top:5%">■報告時間：10分鐘　■提問時間：3分鐘</p>
+                <p>第一聲響：代表剩下1分鐘</p>
+                <p>第二聲響：代表報告結束，停止報告</p>
+                <p style="margin-top:5%">議程場次：</p>
+                <p>A0512場次：張興亞老師、○○○老師</p>
+                <p>A0514場次：蔡柏江老師、○○○老師</p>
+                <p>A0516場次：張　鐸老師、○○○老師</p>
+                <p>A0518場次：許丕忠老師、○○○老師</p>
+                <p>A0411場次：未　定老師、○○○老師</p>
+                <p>A0413場次：未　定老師、○○○老師</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr><h2 class="intro-text text-center"><strong>議程時程表</strong></h2><hr>
+            </div>
+            <div class="col-lg-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>時間</th>
+                            <th>活動內容</th>
+                            <th>地點</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> 
+                            <td>08：10～08：30</td>
+                            <td>簽到</td>
+                            <td>行政大禮堂入口</td>
+                        </tr>
+                        <tr> 
+                            <td>08：30～08：35</td>
+                            <td>開幕儀式<br />樹德科技大學資訊管理系 胡舉軍主任 主持</td>
+                            <td rowspan="5"><br /><br /><br /><br />行政大禮堂入口</td>
+                        </tr>
+                        <tr> 
+                            <td>08：35～08：40</td>
+                            <td>樹德科技大學 朱元祥校長</td>
+                        </tr>
+                        <tr> 
+                            <td>08：40～08：45</td>
+                            <td>樹德科技大學資訊學院 謝文雄院長</td>
+                        </tr>
+                        <tr> 
+                            <td>08：45～08：50</td>
+                            <td>國立高雄應用科技大學管理學院 柯博昌院長</td>
+                        </tr>
+                        <tr> 
+                            <td>08：50～08：55</td>
+                            <td>國立高雄應用科技大學資訊管理系 傅振瑞主任</td>
+                        </tr>
+                        <tr> 
+                            <td><br /><br />09：10～11：40</td>
+                            <td><br /><br />畢業專題簡報</td>
+                            <td>
+                                行政大樓 A0411<br />
+                                行政大樓 A0413<br />
+                                行政大樓 A0512<br />
+                                行政大樓 A0514<br />
+                                行政大樓 A0516<br />
+                                行政大樓 A0518<br />
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td>12：00～14：30</td>
+                            <td>畢業專題成果展覽</td>
+                            <td rowspan="3"><br /><br />行政大禮堂入口</td>
+                        </tr>
+                        <tr> 
+                            <td>15：00</td>
+                            <td>開票</td>
+                        </tr>
+                        <tr> 
+                            <td>15：30</td>
+                            <td>頒獎</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
