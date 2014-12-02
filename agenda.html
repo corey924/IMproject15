@@ -7,6 +7,10 @@
     table th,td {
         text-align:center
     }
+    #agendaTab li{
+        width:50%;
+        font-size:1.3em;
+    }
 </style>
 <script>
     $(document).ready(function () {
@@ -16,6 +20,10 @@
             return false;
         });
     });
+    $('#agendaTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
 </script>
 
 <div class="container">
@@ -42,82 +50,745 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                <hr><h2 class="intro-text text-center"><strong>議程時程表</strong></h2><hr>
-            </div>
-            <div class="col-lg-12 table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>時間</th>
-                            <th>活動內容</th>
-                            <th>地點</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr> 
-                            <td>08：10～08：30</td>
-                            <td>簽到</td>
-                            <td>行政大禮堂入口</td>
-                        </tr>
-                        <tr> 
-                            <td>08：30～08：35</td>
-                            <td>開幕儀式<br />樹德科技大學資訊管理系  胡舉軍主任  主持</td>
-                            <td rowspan="5"><br /><br /><br /><br />行政大禮堂</td>
-                        </tr>
-                        <tr> 
-                            <td>08：35～08：40</td>
-                            <td>樹德科技大學  朱元祥校長</td>
-                        </tr>
-                        <tr> 
-                            <td>08：40～08：45</td>
-                            <td>樹德科技大學資訊學院  謝文雄院長</td>
-                        </tr>
-                        <tr> 
-                            <td>08：45～08：50</td>
-                            <td>國立高雄應用科技大學管理學院  柯博昌院長</td>
-                        </tr>
-                        <tr> 
-                            <td>08：50～08：55</td>
-                            <td>國立高雄應用科技大學資訊管理系  傅振瑞主任</td>
-                        </tr>
-                        <tr> 
-                            <td><br /><br />09：10～11：40</td>
-                            <td><br /><br />畢業專題簡報</td>
-                            <td>
-                                行政大樓 A0411<br />
-                                行政大樓 A0413<br />
-                                行政大樓 A0512<br />
-                                行政大樓 A0514<br />
-                                行政大樓 A0516<br />
-                                行政大樓 A0518<br />
-                            </td>
-                        </tr>
-                        <tr> 
-                            <td>12：00～15：00</td>
-                            <td>畢業專題成果展覽</td>
-                            <td>行政大禮堂</td>
-                        </tr>
-                        <tr> 
-                            <td>15：00~15：30</td>
-                            <td>評審</td>
-							<td></td>
-                        </tr>
-                        <tr> 
-                            <td>15：30</td>
-                            <td>頒獎</td>
-							<td>行政大禮堂</td>
-                        </tr>
-						<tr> 
-							<td></td>
-                            <td>註：領票請攜帶學生證，領票時間12：00～14:25截止，14：30停止投票。<br />註：投票權僅限樹德科技大學資訊管理系師生、國立高雄應用科技大學資訊管理系師生。</td>
-							<td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="col-lg-12">
+        <div class="bs-example bs-example-tabs" role="tabpanel">
+            <ul id="agendaTab" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#schedule" id="stu-tab" role="tab" data-toggle="tab" aria-controls="schedule" aria-expanded="true">時程表</a></li>
+                <li role="presentation" class="" ><a href="#class" role="tab" id="class-tab" data-toggle="tab" aria-controls="class" aria-expanded="false">議程報告順序及教室</a></li>
+            </ul>
         </div>
     </div>
+
+    <div id="agendaTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="schedule" aria-labelledby="schedule-tab">
+            <div class="table-responsive">
+                <div class="row">
+                    <div class="box">
+                        <div class="col-lg-12">
+                            <hr><h2 class="intro-text text-center"><strong>議程時程表</strong></h2><hr>
+                        </div>
+                    <div class="col-lg-12 table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                <th>時間</th>
+                                <th>活動內容</th>
+                                <th>地點</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr> 
+                                    <td>08：10～08：30</td>
+                                    <td>簽到</td>
+                                    <td>行政大禮堂入口</td>
+                                </tr>
+                                <tr> 
+                                    <td>08：30～08：35</td>
+                                    <td>開幕儀式<br />樹德科技大學資訊管理系  胡舉軍主任  主持</td>
+                                    <td rowspan="5"><br /><br /><br /><br />行政大禮堂</td>
+                                </tr>
+                                <tr> 
+                                    <td>08：35～08：40</td>
+                                    <td>樹德科技大學  朱元祥校長</td>
+                                </tr>
+                                <tr> 
+                                    <td>08：40～08：45</td>
+                                    <td>樹德科技大學資訊學院  謝文雄院長</td>
+                                </tr>
+                                <tr> 
+                                    <td>08：45～08：50</td>
+                                    <td>國立高雄應用科技大學管理學院  柯博昌院長</td>
+                                </tr>
+                                <tr> 
+                                    <td>08：50～08：55</td>
+                                    <td>國立高雄應用科技大學資訊管理系  傅振瑞主任</td>
+                                </tr>
+                                <tr> 
+                                    <td><br /><br />09：10～11：40</td>
+                                    <td><br /><br />畢業專題簡報</td>
+                                    <td>
+                                    行政大樓 A0411<br />
+                                    行政大樓 A0413<br />
+                                    行政大樓 A0512<br />
+                                    行政大樓 A0514<br />
+                                    行政大樓 A0516<br />
+                                    行政大樓 A0518<br />
+                                    </td>
+                                </tr>
+                                <tr> 
+                                    <td>12：00～15：00</td>
+                                    <td>畢業專題成果展覽</td>
+                                    <td>行政大禮堂</td>
+                                </tr>
+                                <tr> 
+                                    <td>15：00~15：30</td>
+                                    <td>評審</td>
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <td>15：30</td>
+                                    <td>頒獎</td>
+                                    <td>行政大禮堂</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="text-align:left">註：領票請攜帶學生證，領票時間12：00～14:25截止，14：30停止投票。<br />註：投票權僅限樹德科技大學資訊管理系師生、國立高雄應用科技大學資訊管理系師生。</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="class" aria-labelledby="class-tab">
+            <div class="table-responsive">
+                <div class="row">
+                        <div class="box">
+                            <div class="col-lg-12">
+                                <hr><h2 class="intro-text text-center"><strong>場次A0411</strong></h2><hr>
+                            </div>
+                        <div class="col-lg-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>報告順序</th>
+                                    <th>時間</th>
+                                    <th>組別</th>
+								    <th>專題題目</th>
+								    <th>成員</th>
+								    <th>簡報同學</th>
+								    <th>指導老師</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>1</td>
+                                        <td>09:10<br />09:25</td>
+									    <td>1039</td>
+									    <td>創新資訊產品多人評選支援系統</td>
+									    <td>1100137203　屈怡伶</td>
+									    <td>屈怡伶</td>
+									    <td>張俊陽</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>09:25<br />09:40</td>
+									    <td>1038</td>
+                                        <td>建構個人雲服務評選系統</td>
+									    <td>1100137125　范振勤</td>
+									    <td>范振勤</td>
+									    <td>張俊陽</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>09:40<br />09:55</td>
+                                        <td>1004</td>
+									    <td>響映</td>
+									    <td>11101148　王筱芃<br />11101164　黃聖峰<br />11101147　陸雨涵<br />11101110　朱文慧</td>
+									    <td>王筱芃</td>
+									    <td>蔡柏江</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>4</td>
+                                        <td>09:55<br />10:10</td>
+                                        <td>1047</td>
+									    <td>Dancing Bald Beard</td>
+									    <td>1100137129　黃伯睿<br />1100137117　曾崇傑<br />1100137137　李偉維<br />1100137148　劉曜維</td>
+									    <td>劉曜維</td>
+									    <td>黃河銓</td>
+                                    </tr>
+								    <tr> 
+                                        <td></td>
+                                        <td>10:10－10:30</td>
+                                        <td></td>
+									    <td></td>
+									    <td>休息時間</td>
+									    <td></td>
+									    <td></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>5</td>
+                                        <td>10:30<br />10:45</td>
+                                        <td>1012</td>
+									    <td>跳躍的青春－熱門球類教室<br />The class of Popular sports</td>
+									    <td>11101117　曹嘉航<br />11101118　曾德偉<br />11101125　陳彥綸<br />11101119　楊士弘</td>
+									    <td>曹嘉航</td>
+									    <td>蔡柏江</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>6</td>
+                                        <td>10:45<br />11:00</td>
+                                        <td>1033</td>
+									    <td>高應大化材系儀器管理系統</td>
+									    <td>1100137107　施孟廷<br />1100137122　謝東穎<br />1100137138　簡　敬<br />1100137215　莊頲韙</td>
+									    <td>謝東穎</td>
+									    <td>柯博昌</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>7</td>
+                                        <td>11:00<br />11:15</td>
+                                        <td>1016</td>
+									    <td>即時庫存管理<br />APP Inventory management in JIT app application</td>
+									    <td>11101114　鍾秉憲<br />11101136　蕭政倫<br />11101151　閃雷恩<br />11101135　林稚苰</td>
+									    <td>閃雷恩</td>
+									    <td>蔡柏江</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>8</td>
+                                        <td>11:15<br />11:30</td>
+                                        <td>1028</td>
+									    <td>服務學習資訊整合系統</td>
+									    <td>1100137150 黃郁棨<br />1100137234 凃瑀柔<br />1100137110 陳朝昇<br />1100137101 蔡尹凱</td>
+									    <td>凃瑀柔</td>
+									    <td>汪維揚</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>9</td>
+                                        <td>11:30<br />11:45</td>
+                                        <td>1042</td>
+									    <td>沿山群聚商家資訊服務平台建置</td>
+									    <td>1100137225　郭彥廷<br />1100137205　沈琮凱<br />1100137227　陳炤志<br />1100137248　洪小婷</td>
+									    <td>陳炤志</td>
+									    <td>許瓊文</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="box">
+                            <div class="col-lg-12">
+                                <hr><h2 class="intro-text text-center"><strong>場次A0413</strong></h2><hr>
+                            </div>
+                        <div class="col-lg-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>報告順序</th>
+                                    <th>時間</th>
+                                    <th>組別</th>
+								    <th>專題題目</th>
+								    <th>成員</th>
+								    <th>簡報同學</th>
+								    <th>指導老師</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>1</td>
+                                        <td>09:10<br />09:25</td>
+									    <td>1040</td>
+									    <td>料理輕鬆做</td>
+									    <td>1100137212　林俊慶</td>
+									    <td>林俊慶</td>
+									    <td>許瓊文</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>09:25<br />09:40</td>
+									    <td>1046</td>
+                                        <td>愛逗國際科技股份有限公司-外部印表機系統</td>
+									    <td>1100137237　洪珮容<br />1100137235　楊茹婷<br />1100137204　林妤舫</td>
+									    <td>洪珮容</td>
+									    <td>傅振瑞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>09:40<br />09:55</td>
+                                        <td>1019</td>
+									    <td>驚奇燕巢360</td>
+									    <td>11101160　林威鵬<br />11101267　郭晉宏<br />11101130　胡耀祖<br />11101168　周祐筠<br />11101225　陳威彤</td>
+									    <td>林威鵬</td>
+									    <td>董信煌</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>4</td>
+                                        <td>09:55<br />10:10</td>
+                                        <td>1044</td>
+									    <td>愛逗國際科技股份有限公司-個性化成品系統</td>
+									    <td>1100137224　洪崇議<br />1100137229　莊維荃<br />1100137245　戴伯恩<br />1100137217　林少涵</td>
+									    <td>洪崇議</td>
+									    <td>傅振瑞</td>
+                                    </tr>
+								    <tr> 
+                                        <td></td>
+                                        <td>10:10－10:30</td>
+                                        <td></td>
+									    <td></td>
+									    <td>休息時間</td>
+									    <td></td>
+									    <td></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>5</td>
+                                        <td>10:30<br />10:45</td>
+                                        <td>1008</td>
+									    <td>人力資源管理系統以武昌教會案件為例</td>
+									    <td>11101239　蕭偉倫<br />11101264　賴宣育<br />11101206　范喬竣<br />11101253　李玉山</td>
+									    <td>李玉山</td>
+									    <td>李廷圭</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>6</td>
+                                        <td>10:45<br />11:00</td>
+                                        <td>1029</td>
+									    <td>髓喜烘焙坊專屬網站設計建置</td>
+									    <td>1100137121　林聖昌<br />1100137106　陳莉汶<br />1100137239　廖旻圻<br />1100137219　柯博畬</td>
+									    <td>廖旻圻</td>
+									    <td>汪維揚</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>7</td>
+                                        <td>11:00<br />11:15</td>
+                                        <td>1018</td>
+									    <td>寶貝時光機<br />Baby Diary</td>
+									    <td>11101216　謝博軒<br />11101161　江稚倫<br />11101134　黃建庭<br />11101163　林宥佐</td>
+									    <td>黃建庭</td>
+									    <td>蔡旭昇</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>8</td>
+                                        <td>11:15<br />11:30</td>
+                                        <td>1037</td>
+									    <td>歐貝拉西點專門店購物車系統</td>
+									    <td>1100137132　謝鎧年<br />1100137126　陳卓裕<br />1100137145　林冠君</td>
+									    <td>謝鎧年</td>
+									    <td>張俊陽</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>9</td>
+                                        <td>11:30<br />11:45</td>
+                                        <td>1026</td>
+									    <td>飯店經營管理系統及APP</td>
+									    <td>1100137231　張　瑋<br />1100137202　陳育鴻<br />1100137226　賴忠彥<br />1100137220　楊程皓</td>
+									    <td>張瑋</td>
+									    <td>丁建文</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="box">
+                            <div class="col-lg-12">
+                                <hr><h2 class="intro-text text-center"><strong>場次A0512</strong></h2><hr>
+                            </div>
+                        <div class="col-lg-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>報告順序</th>
+                                    <th>時間</th>
+                                    <th>組別</th>
+								    <th>專題題目</th>
+								    <th>成員</th>
+								    <th>簡報同學</th>
+								    <th>指導老師</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>1</td>
+                                        <td>09:10<br />09:25</td>
+									    <td>1034</td>
+									    <td>農作贏家</td>
+									    <td>1100137210　林瑋宸<br />1100137209　呂奇翰</td>
+									    <td>呂奇翰</td>
+									    <td>徐淑芳</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>09:25<br />09:40</td>
+									    <td>1050</td>
+                                        <td>基植於iBeacons移動應用平台之研製</td>
+									    <td>1100137244　林明宇</td>
+									    <td>林明宇</td>
+									    <td>謝文川</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>09:40<br />09:55</td>
+                                        <td>1010</td>
+									    <td>傳統產業轉換數位行銷之過程－以珠寶商店為例</td>
+									    <td>11101122  李祐瑞<br />11101256  陳昶澕<br />11101123  謝政翰<br />11101157  梁偉恩</td>
+									    <td>謝政翰</td>
+									    <td>陳俊卿</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>4</td>
+                                        <td>09:55<br />10:10</td>
+                                        <td>1049</td>
+									    <td>趣味射擊小遊戲-賽尼亞的泰迪熊</td>
+									    <td>1100137105　林益全<br />1100137115　鄭兆宏<br />1100137133　陳祺文</td>
+									    <td>林益全</td>
+									    <td>黃河銓</td>
+                                    </tr>
+								    <tr> 
+                                        <td></td>
+                                        <td>10:10－10:30</td>
+                                        <td></td>
+									    <td></td>
+									    <td>休息時間</td>
+									    <td></td>
+									    <td></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>5</td>
+                                        <td>10:30<br />10:45</td>
+                                        <td>1014</td>
+									    <td>福爾摩特趴趴走</td>
+									    <td>11101155　鄭宇傑<br />11101226　蔡侑瑼<br />11101203　邱繼宏<br />11101165　陳煜璿</td>
+									    <td>陳煜璿</td>
+									    <td>許丕忠</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>6</td>
+                                        <td>10:45<br />11:00</td>
+                                        <td>1031</td>
+									    <td>藝文展演活動互動式資訊網站設計與開發</td>
+									    <td>1100137108　汪文啟<br />1100137111　楊松翰<br />1100137102　吳映萱<br />1100137140　江宜蓁<br />1100137238　蔡政霖</td>
+									    <td>汪文啟</td>
+									    <td>汪維揚</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>7</td>
+                                        <td>11:00<br />11:15</td>
+                                        <td>1021</td>
+									    <td>3C 達人賽</td>
+									    <td>11101260　黃韋傑<br />11101214　朱廷彰<br />11101224　吳宜謙<br />11101259　陳信佑<br />11101222　廖宣璋</td>
+									    <td>黃韋傑</td>
+									    <td>張興亞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>8</td>
+                                        <td>11:15<br />11:30</td>
+                                        <td>1032</td>
+									    <td>南區區域教學資源中心管考報表系統</td>
+									    <td>1100137120　新政諺<br />1100137109　謝欣余<br />1100137139　顏茂城<br />1100137221　陳冠儒<br />1100137222　朱啟宏</td>
+									    <td>顏茂城</td>
+									    <td>柯博昌</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="box">
+                            <div class="col-lg-12">
+                                <hr><h2 class="intro-text text-center"><strong>場次A0514</strong></h2><hr>
+                            </div>
+                        <div class="col-lg-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>報告順序</th>
+                                    <th>時間</th>
+                                    <th>組別</th>
+								    <th>專題題目</th>
+								    <th>成員</th>
+								    <th>簡報同學</th>
+								    <th>指導老師</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>1</td>
+                                        <td>09:10<br />09:25</td>
+									    <td>1036</td>
+									    <td>校園周邊美食特搜</td>
+									    <td>1100137151　黃文俊<br />1100137250　黃義欽</td>
+									    <td>黃義欽</td>
+									    <td>郝沛毅</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>09:25<br />09:40</td>
+									    <td>1015</td>
+                                        <td>下一夜，高雄<br />Kaohsiung Yes !</td>
+									    <td>11101156　鍾德憲<br />11101212　衛奕成<br />11101250　陳思涵<br />11101257　梁文馨</td>
+									    <td>衛奕成</td>
+									    <td>張興亞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>09:40<br />09:55</td>
+                                        <td>1052</td>
+									    <td>大學報報</td>
+									    <td>1100137230　陳椿宗<br />1100137240　石子宜<br />1100137241　許凱傑</td>
+									    <td>陳椿宗</td>
+									    <td>龔千芬</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>4</td>
+                                        <td>09:55<br />10:10</td>
+                                        <td>1006</td>
+									    <td>Lab of Alarm</td>
+									    <td>11101252　李怡心<br />11101209　朱容萱<br />11101258　許芳綺<br />11101265　薛雅文<br />11101255　李韋震</td>
+									    <td>李韋震</td>
+									    <td>胡舉軍</td>
+                                    </tr>
+								    <tr> 
+                                        <td></td>
+                                        <td>10:10－10:30</td>
+                                        <td></td>
+									    <td></td>
+									    <td>休息時間</td>
+									    <td></td>
+									    <td></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>5</td>
+                                        <td>10:30<br />10:45</td>
+                                        <td>1011</td>
+									    <td>台灣美食驛站<br />Grand gourmet in Taiwan</td>
+									    <td>11101229  楊佩育<br />11101220  吳宜庭<br />11101237  郭宸翰<br />11101213  陳  珊<br />11101234  柯凱翔</td>
+									    <td>楊佩育</td>
+									    <td>蔡柏江</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>6</td>
+                                        <td>10:45<br />11:00</td>
+                                        <td>1030</td>
+									    <td>高雄市現代畫學會E化平台</td>
+									    <td>1100137112　胡智凱<br />1100137131　賴宜汶<br />1100137136　洪郁婷<br />1100137130　林蕙伶<br />1100137211　蔡穎軒</td>
+									    <td>胡智凱</td>
+									    <td>汪維揚</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>7</td>
+                                        <td>11:00<br />11:15</td>
+                                        <td>1007</td>
+									    <td>雲上咖啡館<br />Cloud Café</td>
+									    <td>11101159　黃子峻<br />11101112　蘇  哲<br />11101126　蕭富宏<br />11101240　何仕杰</td>
+									    <td>黃子峻</td>
+									    <td>蔡旭昇</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>8</td>
+                                        <td>11:15<br />11:30</td>
+                                        <td>1035</td>
+									    <td>賃居好方便</td>
+									    <td>1099137115　戴梓珊<br />1098137137　許正憲<br />1098137106　吳允中<br />1100137143　賴玟蓁</td>
+									    <td>吳允中</td>
+									    <td>郝沛毅</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="box">
+                            <div class="col-lg-12">
+                                <hr><h2 class="intro-text text-center"><strong>場次A0516</strong></h2><hr>
+                            </div>
+                        <div class="col-lg-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>報告順序</th>
+                                    <th>時間</th>
+                                    <th>組別</th>
+								    <th>專題題目</th>
+								    <th>成員</th>
+								    <th>簡報同學</th>
+								    <th>指導老師</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>1</td>
+                                        <td>09:10<br />09:25</td>
+									    <td>1051</td>
+									    <td>澎湖旅遊網</td>
+									    <td>1100137141　許庭翊<br />1100137142　林政頡</td>
+									    <td>許庭翊</td>
+									    <td>龔千芬</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>09:25<br />09:40</td>
+									    <td>1017</td>
+                                        <td>創業圓夢活動</td>
+									    <td>11101263　李柏均<br />11101204　簡榮興<br />11101201　蘇子為</td>
+									    <td>簡榮興</td>
+									    <td>張興亞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>09:40<br />09:55</td>
+                                        <td>1045</td>
+									    <td>愛逗國際科技股份有限公司-個性化產品系統</td>
+									    <td>1100137213　蔡諺昌<br />1100137216　陳羿廷<br />1100137201　施信諺<br />1100137243　王煥榮<br />1100137232　吳友強</td>
+									    <td>施信諺</td>
+									    <td>傅振瑞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>4</td>
+                                        <td>09:55<br />10:10</td>
+                                        <td>1001</td>
+									    <td>探索瓦力君</td>
+									    <td>11101217　涂佳偉<br />11101211　莊明揚<br />11101262　陳柏均<br />11101127　林耀國</td>
+									    <td>莊明揚</td>
+									    <td>胡舉軍</td>
+                                    </tr>
+								    <tr> 
+                                        <td></td>
+                                        <td>10:10－10:30</td>
+                                        <td></td>
+									    <td></td>
+									    <td>休息時間</td>
+									    <td></td>
+									    <td></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>5</td>
+                                        <td>10:30<br />10:45</td>
+                                        <td>1048</td>
+									    <td>馬路大車拼</td>
+									    <td>1100137119　鄭明祐<br />1100137114　賴興晟<br />1100137124　陳彥甫<br />1100137116　陳維成</td>
+									    <td>鄭明祐</td>
+									    <td>黃河銓</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>6</td>
+                                        <td>10:45<br />11:00</td>
+                                        <td>1009</td>
+									    <td>The Great Balala</td>
+									    <td>11101207　鄒艾珊<br />11101249　張耀翔<br />11101231　許碩廷<br />11101210　唐瑋廷</td>
+									    <td>許碩廷</td>
+									    <td>張興亞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>7</td>
+                                        <td>11:00<br />11:15</td>
+                                        <td>1041</td>
+									    <td>廣信生技網路行銷平台建置</td>
+									    <td>1100137118　王博玄<br />1100137134　郭俊佑<br />1100137147　林志宣1<br />100137228　朱軒韋</td>
+									    <td>林志宣</td>
+									    <td>許瓊文</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>8</td>
+                                        <td>11:15<br />11:30</td>
+                                        <td>1002</td>
+									    <td>健康生活館網站與行動APP平台之開發</td>
+									    <td>11101103　顏舜德<br />11101149　陳昱中<br />11101129　鍾政豪<br />11101101　林俊諴</td>
+									    <td>顏舜德</td>
+									    <td>胡舉軍</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			    <div class="row">
+                        <div class="box">
+                            <div class="col-lg-12">
+                                <hr><h2 class="intro-text text-center"><strong>場次A0518</strong></h2><hr>
+                            </div>
+                        <div class="col-lg-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>報告順序</th>
+                                    <th>時間</th>
+                                    <th>組別</th>
+								    <th>專題題目</th>
+								    <th>成員</th>
+								    <th>簡報同學</th>
+								    <th>指導老師</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>1</td>
+                                        <td>09:10<br />09:25</td>
+									    <td>1022</td>
+									    <td>賽事資源管理與分配系統之建置</td>
+									    <td>11101241　劉晨宇</td>
+									    <td>劉晨宇</td>
+									    <td>陳俊卿</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>2</td>
+                                        <td>09:25<br />09:40</td>
+									    <td>1027</td>
+                                        <td>打狗瘋文化</td>
+									    <td>1099137145　宋凱豐</td>
+									    <td>宋凱豐</td>
+									    <td>丁建文</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>3</td>
+                                        <td>09:40<br />09:55</td>
+                                        <td>1020</td>
+									    <td>燕巢歡樂Go</td>
+									    <td>11101254　董友銘<br />11101230　李振鴻<br />11120118　歐冠輝</td>
+									    <td>歐冠輝</td>
+									    <td>張鐸</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>4</td>
+                                        <td>09:55<br />10:10</td>
+                                        <td>1024</td>
+									    <td>App 於學生租屋與商品會展的應用</td>
+									    <td>1100137236　林振穎<br />1100137208　王幸子<br />1100137223　鄭燕玄<br />1100137233　陳韋樺</td>
+									    <td>林振穎</td>
+									    <td>丁建文</td>
+                                    </tr>
+								    <tr> 
+                                        <td></td>
+                                        <td>10:10－10:30</td>
+                                        <td></td>
+									    <td></td>
+									    <td>休息時間</td>
+									    <td></td>
+									    <td></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>5</td>
+                                        <td>10:30<br />10:45</td>
+                                        <td>1003</td>
+									    <td>iB*pos</td>
+									    <td>11101261　彭立宏<br />11101143　黃威翰<br />11101162　趙邦任<br />11101219　謝政翰</td>
+									    <td>彭立宏</td>
+									    <td>蔡旭昇</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>6</td>
+                                        <td>10:45<br />11:00</td>
+                                        <td>1025</td>
+									    <td>以開放式硬體整合近距離無線通訊之智慧型居家植物照護裝置</td>
+									    <td>1100137214　黃　竟<br />1100137149　黃韋綸<br />1100137113　許正翰<br />1100137127　吳嘉偉</td>
+									    <td>黃韋綸</td>
+									    <td>丁建文</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>7</td>
+                                        <td>11:00<br />11:15</td>
+                                        <td>1043</td>
+									    <td>愛逗國際科技股份有限公司-內部印表機系統</td>
+									    <td>1100137103　陳薇竹<br />1100137104　謝佳穎<br />1100137135　胡紹萱<br />1100137207　李容誼</td>
+									    <td>陳薇竹</td>
+									    <td>傅振瑞</td>
+                                    </tr>
+                                    <tr> 
+                                        <td>8</td>
+                                        <td>11:15<br />11:30</td>
+                                        <td>1005</td>
+									    <td>汽機車保養達人<br />Management expert of vehicles and autobikes</td>
+									    <td>11101121　蘇正義<br />11101113　謝竣宇<br />11101128　莊智為<br />11101109　蔡瑞政</td>
+									    <td>蘇正義</td>
+									    <td>蔡柏江</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 </div>
