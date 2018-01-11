@@ -6,6 +6,10 @@ IMproject15
 本目錄下為樹德科技大學資訊管理系第十五屆實務專題展使用之導覽網站前端範本。
 
 
+# Demo Page
+* [http://corey924.github.io/IMproject15/](http://corey924.github.io/improject15/)
+
+
 ## Library
 
 * jQuery 1.10.2
